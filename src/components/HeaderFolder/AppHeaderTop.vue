@@ -42,6 +42,10 @@ export default {
 
             </div>
 
+            <div class="menu-hamburguer">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
         </div>
     </div>
     <!-- /Navbar -->
@@ -50,6 +54,10 @@ export default {
 
 <style lang="scss" scoped>
 @use "../../styles/partials/variables" as *;
+
+.menu-hamburguer {
+    display: none;
+}
 
 .msg {
     background-color: $header-top-bg;
@@ -111,6 +119,20 @@ export default {
         & a:not(:last-child) {
             margin-right: 1rem;
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .links {
+        display: none;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .menu-hamburguer {
+        display: block;
     }
 }
 </style>
