@@ -2,6 +2,7 @@
 import { store } from "../store";
 
 export default {
+    name: "AppFooter",
     data() {
         return {
             store

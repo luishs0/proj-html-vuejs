@@ -1,6 +1,17 @@
 @use "./partials/variables" as *;
 @import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 
-h1 {
-    color: green;
+
+// BTN ------------------------------------
+.btn-primary {
+    background-color: $primary-orange;
+    border: none;
 }
+
+.btn-primary:hover {
+    background-color: $secondary-orange;
+    color: $primary-orange;
+}
+
+// /BTN------------------------------------

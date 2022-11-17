@@ -1,4 +1,5 @@
 <script>
+import AppHeader from "./components/AppHeader.vue";
 import { store } from "./store";
 
 export default {
@@ -8,7 +9,7 @@ export default {
     }
   },
   components: {
-    // Files .vue
+    AppHeader,
   },
   created() {
     // Funzioni inmediate
@@ -22,8 +23,17 @@ export default {
 
 
 <template>
-  <h1>Hello</h1>
-  <p>As a coach</p>
+  <header>
+    <AppHeader />
+  </header>
+
+  <main>
+
+  </main>
+
+  <footer>
+
+  </footer>
 </template>
 
 
