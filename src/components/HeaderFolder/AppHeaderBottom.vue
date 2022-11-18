@@ -13,23 +13,25 @@ export default {
 
 
 <template>
-    <div class="ms_container-banner d-flex justify-content-center">
+    <div class="ms_container">
+        <div class="ms_container-banner d-flex justify-content-center">
 
-        <img class="artist-hero" src="../../assets/img/artist-hero-image-04.jpg" alt="">
-        <img class="artist-shape-5" src="../../assets/img/artist-shape-05.png" alt="">
-        <img class="artist-shape-1" src="../../assets/img/artist-shape-01.png" alt="">
-        <img class="artist-shape-2" src="../../assets/img/artist-shape-02.png" alt="">
-        <img class="artist-shape-3" src="../../assets/img/artist-shape-03.png" alt="">
-        <img class="artist-hero-1" src="../../assets/img/artist-hero-image-01.jpg" alt="">
-        <img class="artist-hero-2" src="../../assets/img/artist-hero-image-02.jpg" alt="">
-        <img class="artist-hero-3" src="../../assets/img/artist-hero-image-03.png" alt="">
+            <img class="artist-hero" src="../../assets/img/artist-hero-image-04.jpg" alt="">
+            <img class="artist-shape-5" src="../../assets/img/artist-shape-05.png" alt="">
+            <img class="artist-shape-1" src="../../assets/img/artist-shape-01.png" alt="">
+            <img class="artist-shape-2" src="../../assets/img/artist-shape-02.png" alt="">
+            <img class="artist-shape-3" src="../../assets/img/artist-shape-03.png" alt="">
+            <img class="artist-hero-1" src="../../assets/img/artist-hero-image-01.jpg" alt="">
+            <img class="artist-hero-2" src="../../assets/img/artist-hero-image-02.jpg" alt="">
+            <img class="artist-hero-3" src="../../assets/img/artist-hero-image-03.png" alt="">
 
-        <div class="banner-text text-center">
-            <h2>Hello, Im Martin</h2>
-            <h1 class="mb-4">Artist Coaching And Mentoring Might Be for You</h1>
-            <button class="btn btn-primary">Get started today</button>
+            <div class="banner-text text-center">
+                <h2>Hello, Im Martin</h2>
+                <h1 class="mb-4">Artist Coaching And Mentoring Might Be for You</h1>
+                <button class="btn btn-primary">Get started today</button>
+            </div>
+
         </div>
-
     </div>
 </template>
 
@@ -39,12 +41,13 @@ export default {
 @use "../../styles/partials/variables" as *;
 @use "node_modules/@fontsource/imperial-script/index.css";
 
-template {
-    max-width: 1200px;
+.ms_container {
+    background-color: $banner-color;
 }
 
 .ms_container-banner {
-    background-color: $banner-color;
+    max-width: 1500px;
+    margin: auto;
     position: relative;
     padding: 2rem;
     overflow: hidden;

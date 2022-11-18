@@ -1,4 +1,6 @@
 <script>
+import AppMainTop from "./MainFolder/AppMainTop.vue";
+import AppMainBottom from "./MainFolder/AppMainBottom.vue";
 import { store } from "../store";
 
 export default {
@@ -7,12 +9,20 @@ export default {
         return {
             store
         }
+    },
+    components: {
+        AppMainTop,
+        AppMainBottom
     }
 }
 </script>
 
 
 <template>
+
+    <AppMainTop />
+
+    <AppMainBottom />
 
 </template>
 
