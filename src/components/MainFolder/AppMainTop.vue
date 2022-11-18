@@ -102,13 +102,36 @@ export default {
             </div>
         </div>
     </section>
+    <!-- /SECTION 2 -->
+
+    <!-- SECTION 3 -->
+    <section class="section-3">
+
+
+
+        <div class="container text-center p-relative">
+            <img class="video-poster" src="../../assets/img/artist-video-poster.jpg" alt="">
+            <img class="youtube-play" src="../../assets/img/icon-youtube-play.png" alt="">
+            <img class="shape-video" src="../../assets/img/artist-shape-01.png" alt="">
+            <img class="points-img" src="../../assets/img/maxcoach-shape-05.png" alt="">
+            <img class="points-img-2" src="../../assets/img/maxcoach-shape-05.png" alt="">
+            <i class="fa-regular fa-circle circle-video"></i>
+        </div>
+
+        <img class="d-block" src="../../assets/img/wave.svg" alt="">
+
+    </section>
+
+    <!-- /SECTION 3 -->
 
 </template>
 
 
 <style lang="scss" scoped>
+@use "../../styles/partials/variables" as *;
+
 section {
-    margin: 6rem 0;
+    margin: 8rem 0;
 }
 
 // SECTION 1 --------------------------
@@ -197,5 +220,63 @@ section {
     font-family: 'imperial-script', 'sans-serif';
     font-size: 1rem;
     color: #69c5f1;
+}
+
+// /SECTION 2-------------------
+
+// SECTION 3 ----------------------
+.video-poster {
+    width: 80%;
+    margin: auto;
+    max-width: 750px;
+    position: relative;
+    z-index: 500;
+}
+
+.youtube-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    cursor: pointer;
+    width: 5rem;
+}
+
+.shape-video {
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.section-3 {
+
+    margin-bottom: 0;
+
+    .points-img {
+        position: absolute;
+        top: 0;
+        left: 10%;
+    }
+
+    .points-img-2 {
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+    }
+
+    .circle-video {
+        font-size: 4rem;
+        color: $secondary-orange;
+        position: absolute;
+        top: 15%;
+        right: 7%;
+        z-index: 999;
+    }
 }
 </style>

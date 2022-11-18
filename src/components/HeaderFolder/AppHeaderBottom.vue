@@ -24,6 +24,7 @@ export default {
             <img class="artist-hero-1" src="../../assets/img/artist-hero-image-01.jpg" alt="">
             <img class="artist-hero-2" src="../../assets/img/artist-hero-image-02.jpg" alt="">
             <img class="artist-hero-3" src="../../assets/img/artist-hero-image-03.png" alt="">
+            <img class="artist-shape-4" src="../../assets/img/artist-shape-04.png" alt="">
 
             <div class="banner-text text-center">
                 <h2>Hello, Im Martin</h2>
@@ -103,6 +104,14 @@ export default {
     z-index: 0;
 }
 
+.artist-shape-4 {
+    width: 10%;
+
+    position: absolute;
+    top: 10%;
+    right: 15%;
+}
+
 .artist-shape-5 {
     width: 30%;
 
@@ -156,7 +165,8 @@ export default {
     .artist-hero-3,
     .artist-shape-3,
     .artist-shape-5,
-    .artist-shape-1 {
+    .artist-shape-1,
+    .artist-shape-4 {
         display: none;
     }
 
