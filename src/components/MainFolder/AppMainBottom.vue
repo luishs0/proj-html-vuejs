@@ -20,14 +20,14 @@ export default {
 <template>
     <!-- SECTION 5 -->
     <section class="section-5">
-        <div class="ms_container mt-5">
+        <div class="ms_container mt-5 mb-5">
 
             <h3 class="text-center ms_blue mt-5">Artist Coaching</h3>
             <h2 class="text-center mb-5">Latest Online Courses</h2>
 
             <div class="row mb-5 g-3">
                 <div v-for="(course, index) in this.store.coursesArray" :key="index"
-                    class="col-12 col-sm-6 col-md-3 d-flex align-items-stretch mb-4">
+                    class="col-12 col-sm-6 col-md-3 d-flex align-items-stretch mb-2">
                     <div class="ms_courses-card d-flex flex-column justify-content-between">
                         <div class="courses-card-img">
                             <img :src="getImagePath(`../../assets/img${course.img}`)" alt="">
@@ -47,6 +47,11 @@ export default {
                     </div>
                 </div>
             </div>
+
+            <div class="button-courses text-center">
+                <button class="btn btn-primary">View all courses <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
 
         </div>
     </section>
@@ -110,6 +115,12 @@ export default {
     .lessons-students {
         padding-left: .2rem;
         font-size: .7rem;
+        color: gray;
+    }
+
+    .btn {
+        font-size: .8rem;
+        padding: .5rem 1.5rem;
     }
 }
 </style>
