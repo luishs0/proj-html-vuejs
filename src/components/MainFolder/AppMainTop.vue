@@ -124,6 +124,90 @@ export default {
 
     <!-- /SECTION 3 -->
 
+    <!-- SECTION 4 -->
+    <section class="section-4">
+
+        <div class="ms_section-4-container">
+            <h3 class="ms_blue text-center pt-5">Testimonials</h3>
+            <h2 class="text-center mb-5">Why do people love me?</h2>
+
+            <div class="row g-3">
+
+                <div class="col-12 col-md-4 mb-5 ms_card">
+                    <div class="container-col card-op">
+                        <h5 class="testimonial-title mb-3">It's a choice of quality for people with special needs</h5>
+                        <p class="testimonial-p mb-4">
+                            I'm a very strict person so I require everything to be organised and neat. Then I'll be able
+                            to
+                            make things right and shine. MaxCoach guys just got me.
+                        </p>
+                        <div class="testimonial-person d-flex">
+                            <div class="testimonial-img me-3">
+                                <img src="../../assets/img/artist-testimonial-avatar-02.jpg" alt="">
+                            </div>
+                            <div class="testimonial-name">
+                                <span class="testimonial-name-name">Florence Themes</span>
+                                <br>
+                                <span class="testimonial-name-roll">/ Multimedia Admin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-5 ms_card">
+                    <div class="container-col">
+                        <h5 class="testimonial-title mb-3">High level of efficiency and scientific teaching methods</h5>
+                        <p class="testimonial-p mb-4">
+                            I am free to learn at my own pace, follow my own schedule and choose the subject I want to
+                            learn
+                            from the syllabus. Great study portal for people like me.
+                        </p>
+                        <div class="testimonial-person d-flex">
+                            <div class="testimonial-img me-3">
+                                <img src="../../assets/img/artist-testimonial-avatar-04.jpg" alt="">
+                            </div>
+                            <div class="testimonial-name">
+                                <span class="testimonial-name-name">Mina Hollace</span>
+                                <br>
+                                <span class="testimonial-name-roll">/ Freelancer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-5 ms_card">
+                    <div class="container-col card-op">
+                        <h5 class="testimonial-title mb-3">Professional team of specialists and passionate mentors at
+                            reach
+                        </h5>
+                        <p class="testimonial-p mb-4">
+                            I need to get a certification for English proficiency and MaxCoach is my best choice. Their
+                            tutors are smart and proffesional when dealing with students.
+                        </p>
+                        <div class="testimonial-person d-flex">
+                            <div class="testimonial-img me-3">
+                                <img src="../../assets/img/artist-testimonial-avatar-01.jpg" alt="">
+                            </div>
+                            <div class="testimonial-name">
+                                <span class="testimonial-name-name">Madley Pondor</span>
+                                <br>
+                                <span class="testimonial-name-roll">/ IT specialist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="testimonial-points text-center">
+                <i class="fa-solid fa-circle active-circle"></i>
+                <i class="fa-solid fa-circle gray-circle"></i>
+                <i class="fa-solid fa-circle gray-circle"></i>
+                <i class="fa-solid fa-circle gray-circle"></i>
+            </div>
+        </div>
+
+    </section>
+    <!-- /SECTION 4 -->
+
 </template>
 
 
@@ -279,4 +363,83 @@ section {
         z-index: 999;
     }
 }
+
+// /SECTION 3-------------------
+
+// SECTION 4 ------------------
+
+.ms_section-4-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section-4 {
+    background-color: #faf8f6;
+    margin: 0;
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .testimonial-img {
+
+        img {
+            border-radius: 50%;
+            height: auto;
+            width: 3rem;
+        }
+    }
+
+    .testimonial-title {
+        font-size: .9rem;
+    }
+
+    .testimonial-p {
+        font: .7rem;
+    }
+
+    .testimonial-name-name {
+        font-weight: 500;
+        font-size: .9rem;
+    }
+
+    .testimonial-name-roll {
+        font-size: .8rem;
+        color: gray;
+    }
+
+    .container-col {
+        background-color: white;
+        padding: 1rem;
+        border-radius: 5px;
+        height: 100%;
+    }
+
+    .card-op {
+        opacity: .4;
+    }
+
+    .testimonial-points {
+
+        & :not(:last-child) {
+            margin-right: .8rem;
+        }
+
+        .gray-circle {
+            color: #d8d8d8;
+            font-size: .4rem;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .active-circle {
+            font-size: .6rem;
+            vertical-align: middle;
+            cursor: pointer;
+            color: #111111;
+        }
+    }
+}
+
+// /SECTION 4--------------------
 </style>
