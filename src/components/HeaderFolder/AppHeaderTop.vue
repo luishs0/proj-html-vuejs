@@ -30,7 +30,8 @@ export default {
             </div>
 
             <div class="links">
-                <a v-for="link in this.store.headerLinks" href=""> {{ link }} <i class="fa-solid fa-chevron-down"></i>
+                <a v-for="(link, index) in this.store.headerLinks" :key="index" href=""> {{ link }} <i
+                        class="fa-solid fa-chevron-down"></i>
                 </a>
             </div>
 

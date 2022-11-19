@@ -10,11 +10,11 @@ export default {
 
 <template>
     <!-- SECTION 1 -->
-    <section>
+    <section class="section-1">
         <div class="ms_general-container">
             <div class="container">
 
-                <div class="section-1">
+                <div class="section-1-container">
                     <img class="shape-turn" src="../../assets/img/artist-shape-01-turn.png" alt="">
                     <img class="max-coach-shape" src="../../assets/img/maxcoach-shape-14.png" alt="">
                     <img class="max-coach-shape-13" src="../../assets/img/maxcoach-shape-13.png" alt="">
@@ -197,7 +197,7 @@ export default {
 
             </div>
 
-            <div class="testimonial-points text-center">
+            <div class="testimonial-points text-center pb-4">
                 <i class="fa-solid fa-circle active-circle"></i>
                 <i class="fa-solid fa-circle gray-circle"></i>
                 <i class="fa-solid fa-circle gray-circle"></i>
@@ -219,14 +219,19 @@ section {
 }
 
 // SECTION 1 --------------------------
-.ms_general-container {
+
+.section-1 {
     position: relative;
+}
+
+.ms_general-container {
+
     max-width: 1500px;
     margin: auto;
     overflow: hidden;
 }
 
-.section-1 {
+.section-1-container {
     max-width: 1500px;
 
     .shape-turn {
@@ -239,9 +244,9 @@ section {
     .max-coach-shape {
         width: 100%;
         position: absolute;
-        top: 5%;
+        top: 0;
         left: 0;
-
+        height: 75%;
     }
 
     .max-coach-shape-13 {
@@ -371,6 +376,7 @@ section {
 .ms_section-4-container {
     width: 90%;
     margin: 0 auto;
+    max-width: 1500px;
 }
 
 .section-4 {
