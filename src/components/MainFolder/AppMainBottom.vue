@@ -140,6 +140,97 @@ export default {
         </div>
     </section>
     <!-- /SECTION 6 -->
+
+    <!-- SECTION 7 -->
+    <section class="section-7">
+
+        <img class="bg-7-1" src="../../assets/img/artist-shape-02-turn.png" alt="">
+        <img class="bg-7-2" src="../../assets/img/maxcoach-shape-13.png" alt="">
+
+        <div class="container ms_container-7">
+
+            <h3 class="ms_blue text-center mt-5">Upcoming Events</h3>
+            <h2 class="text-center mb-5">Lets Work Together</h2>
+
+
+            <div class="row g-5 mb-5">
+                <div class="col-md-3 col-sm-6 col-12">
+                    <div class="col-container">
+                        <img src="../../assets/img/artist-event-04-250x300.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 d-flex align-items-center">
+                    <div class="col-container">
+                        <div class="date-7">
+                            NOV 22, 2020
+                        </div>
+                        <div class="title-7">
+                            STORYTELLING WORKSHOP
+                        </div>
+                        <div class="place-7">
+                            <i class="fa-solid fa-location-dot"></i> TEXAS, US
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <div class="col-container">
+                        <img src="../../assets/img/artist-event-03-250x300.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 d-flex align-items-center">
+                    <div class="col-container">
+                        <div class="date-7">
+                            NOV 22, 2020
+                        </div>
+                        <div class="title-7">
+                            STORYTELLING WORKSHOP
+                        </div>
+                        <div class="place-7">
+                            <i class="fa-solid fa-location-dot"></i> TEXAS, US
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 d-flex align-items-center">
+                    <div class="col-container text-end">
+                        <div class="date-7">
+                            NOV 22, 2020
+                        </div>
+                        <div class="title-7">
+                            STORYTELLING WORKSHOP
+                        </div>
+                        <div class="place-7">
+                            <i class="fa-solid fa-location-dot"></i> TEXAS, US
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <div class="col-container">
+                        <img src="../../assets/img/artist-event-02-250x300.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12 d-flex align-items-center">
+                    <div class="col-container text-end">
+                        <div class="date-7">
+                            NOV 22, 2020
+                        </div>
+                        <div class="title-7">
+                            STORYTELLING WORKSHOP
+                        </div>
+                        <div class="place-7">
+                            <i class="fa-solid fa-location-dot"></i> TEXAS, US
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <div class="col-container">
+                        <img src="../../assets/img/artist-event-01-250x300.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- /SECTION 7 -->
 </template>
 
 
@@ -148,7 +239,7 @@ h2 {
     font-size: 1.2rem;
 }
 
-// SECTION 5----------------
+// SECTION 5-----------------------------------------------------
 .ms_container {
     width: 90%;
     margin: auto;
@@ -232,7 +323,7 @@ h2 {
     }
 }
 
-// SECTION 6-------------------
+// SECTION 6----------------------------------------------------------
 .section-6 {
     position: relative;
     overflow: hidden;
@@ -404,6 +495,70 @@ h2 {
             }
         }
     }
+}
 
+// SECTION 7---------------------------------------------------
+
+.section-7 {
+    position: relative;
+    overflow: hidden;
+
+    .bg-7-1 {
+        width: 20%;
+        position: absolute;
+        bottom: -20%;
+        left: 0;
+    }
+
+    .bg-7-2 {
+        width: 15%;
+        position: absolute;
+        top: 15%;
+        right: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .bg-7-1,
+        .bg-7-2 {
+            display: none;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .date-7 {
+        color: gray;
+        font-size: .8rem;
+        margin-bottom: .3rem;
+    }
+
+    .title-7 {
+        font-weight: 600;
+        font-size: .8rem;
+        margin-bottom: .3rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 999;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .place-7 {
+        font-size: .6rem;
+        color: gray;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section-7 {
+        .ms_container-7 {
+            max-width: 1200px;
+        }
+    }
 }
 </style>
