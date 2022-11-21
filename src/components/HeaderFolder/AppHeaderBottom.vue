@@ -61,8 +61,8 @@ export default {
 
 
         h2 {
-            font-family: 'imperial-script', 'sans-serif';
-            font-size: 1.2rem;
+            font-family: "Imperial Script", cursive;
+            font-size: 1.7rem;
             color: #69c5f1;
         }
 

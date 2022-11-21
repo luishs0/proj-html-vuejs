@@ -38,7 +38,7 @@ export default {
                                 </p>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-sm-6 col-md-3 low-column">
                             <div class="ms_card-img mb-3">
                                 <img src="../../assets/img/artist-box-image-02.png" alt="">
                             </div>
@@ -61,7 +61,7 @@ export default {
                                 </p>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-sm-6 col-md-3 low-column">
                             <div class="ms_card-img mb-3">
                                 <img src="../../assets/img/artist-box-image-04.png" alt="">
                             </div>
@@ -212,6 +212,7 @@ export default {
 
 
 <style lang="scss" scoped>
+@use "../../styles/general.scss" as *;
 @use "../../styles/partials/variables" as *;
 
 section {
@@ -255,6 +256,20 @@ section {
         top: 20%;
         right: 0;
     }
+
+
+}
+
+.low-column {
+    position: relative;
+    top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .low-column {
+        position: relative;
+        top: 0;
+    }
 }
 
 
@@ -268,8 +283,8 @@ section {
     overflow: hidden;
 
     h3 {
-        font-family: 'imperial-script', 'sans-serif';
-        font-size: 1rem;
+        font-family: "Imperial Script", cursive;
+        font-size: 1.7rem;
         color: #69c5f1;
     }
 
@@ -281,6 +296,9 @@ section {
 .row {
     img {
         height: 5rem;
+        position: relative;
+        z-index: 999;
+
     }
 
     h4 {
@@ -306,8 +324,8 @@ section {
 }
 
 .ms_blue {
-    font-family: 'imperial-script', 'sans-serif';
-    font-size: 1rem;
+    font-family: "Imperial Script", cursive;
+    font-size: 1.7rem;
     color: #69c5f1;
 }
 

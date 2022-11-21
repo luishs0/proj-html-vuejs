@@ -20,6 +20,9 @@ export default {
 <template>
     <!-- SECTION 5 -->
     <section class="section-5">
+
+        <img class="artist-shape" src="../../assets/img/artist-shape-01-turn.png" alt="">
+
         <div class="ms_container mt-5 mb-5">
 
             <h3 class="text-center ms_blue mt-5">Artist Coaching</h3>
@@ -37,7 +40,7 @@ export default {
                             ${{ course.price }}.00
                         </div>
                         <div class="course-name">
-                            "{{ course.courseName }}"
+                            {{ course.courseName }}
                         </div>
                         <div class="lessons-students">
                             <span class="me-3"> <i class="fa-regular fa-file-zipper"></i> {{ course.lessons }} Lessons
@@ -57,10 +60,27 @@ export default {
     </section>
 
     <!-- /SECTION 5 -->
+
+
+    <!-- SECTION 6 -->
+    <section class="section-6">
+        <div class="container">
+
+            <h3 class="ms_blue text-center pt-5">Articles and Tips</h3>
+            <h2 class="text-center pb-5">Latest from the blog</h2>
+
+        </div>
+    </section>
+    <!-- /SECTION 6 -->
 </template>
 
 
 <style lang="scss" scoped>
+h2 {
+    font-size: 1.2rem;
+}
+
+// SECTION 5----------------
 .ms_container {
     width: 90%;
     margin: auto;
@@ -68,15 +88,15 @@ export default {
 }
 
 .ms_blue {
-    font-family: 'imperial-script', 'sans-serif';
-    font-size: 1rem;
+    font-family: "Imperial Script", cursive;
+    font-size: 1.7rem;
     color: #69c5f1;
 }
 
 .section-5 {
-    h2 {
-        font-size: 1.2rem;
-    }
+    position: relative;
+    overflow: hidden;
+
 
     img {
         width: 100%;
@@ -84,10 +104,20 @@ export default {
 
     }
 
+    .row {
+        width: 90%;
+        margin: auto;
+    }
+
     .ms_courses-card {
         width: 80%;
         margin: auto;
         height: 100%;
+
+        img {
+            position: relative;
+            z-index: 999;
+        }
     }
 
     .course-price {
@@ -122,5 +152,20 @@ export default {
         font-size: .8rem;
         padding: .5rem 1.5rem;
     }
+
+    .artist-shape {
+        width: 30%;
+
+        position: absolute;
+        top: 10%;
+        right: -10%;
+
+        z-index: 0;
+    }
+}
+
+// SECTION 6-------------------
+.section-6 {
+    background-color: #f5f7fa;
 }
 </style>
