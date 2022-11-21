@@ -7,6 +7,12 @@ export default {
         return {
             store
         }
+    },
+    props: {
+        adress: Array,
+        explore: Array,
+        information: Array,
+        fotoList: Array,
     }
 }
 </script>
@@ -32,6 +38,45 @@ export default {
         </div>
     </section>
     <!-- /FOOTER TOP -->
+
+    <!-- FOOTER BOTTOM -->
+    <section class="footer-bottom">
+        <div class="container">
+            <!-- Adress -->
+            <div class="adress-column">
+                <h4> Adress </h4>
+                <ul>
+                    <li v-for="(adressInfo, index) in adress" :key="index"> {{ adressInfo }} </li>
+                </ul>
+            </div>
+
+            <!-- Explore -->
+            <div class="explore-column">
+                <h4>Explore</h4>
+                <ul>
+                    <li v-for="(exploreLink, index) in explore"> {{ exploreLink }}</li>
+                </ul>
+            </div>
+
+            <!-- Information -->
+            <div class="info-column">
+                <h4>Information</h4>
+                <ul>
+                    <li v-for="(infoLink, index) in information"> {{ infoLink }} </li>
+                </ul>
+            </div>
+
+            <!-- Instagram -->
+            <div class="instagram-column">
+                <h4>Instagram <span>@maxcoach</span></h4>
+                <ul>
+
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <!-- /FOOTER BOTTOM -->
 
 </template>
 
