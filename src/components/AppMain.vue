@@ -12,7 +12,7 @@ export default {
     },
     components: {
         AppMainTop,
-        AppMainBottom
+        AppMainBottom,
     }
 }
 </script>
