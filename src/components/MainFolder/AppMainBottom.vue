@@ -64,10 +64,78 @@ export default {
 
     <!-- SECTION 6 -->
     <section class="section-6">
+
+        <img class="bg-1" src="../../assets/img/maxcoach-shape-03.png" alt="">
+        <div class="bg-2"><i class="fa-regular fa-circle"></i></div>
+        <img class="bg-3" src="../../assets/img/maxcoach-shape-05.png" alt="">
+
         <div class="container">
 
             <h3 class="ms_blue text-center pt-5">Articles and Tips</h3>
             <h2 class="text-center pb-5">Latest from the blog</h2>
+
+            <div class="cards-6 d-flex flex-wrap justify-content-around align-items-center">
+                <div class="ms_card-1">
+                    <div class="card-1-img mb-3">
+                        <img src="../../assets/img/120084500_197897808368764_8114555493043279565_n.jpg" alt="">
+                    </div>
+                    <div class="card-1-text">
+                        <div class="section-6-roll mb-1">
+                            ARTIST
+                        </div>
+                        <div class="title-6 mb-1">
+                            Brush Strokes Energize Trees in Paintings
+                        </div>
+                        <div class="date-views">
+                            <span class="me-1"> <i class="fa-regular fa-calendar"></i> May 15, 2020
+                            </span>
+                            <span> <i class="fa-solid fa-eye"></i> 688 Views</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ms_card-2 mb-5">
+                    <div class="card-2-img">
+                        <div class="black"></div>
+                        <img src="../../assets/img/artist-blog-02-500x680.jpg" alt="">
+                    </div>
+                    <div class="card-2-text">
+                        <div class="section-6-roll special">
+                            ARTIST
+                        </div>
+                        <div class="title-6 special">
+                            Connection Between Self-Portraits and Identity
+                        </div>
+                        <div class="date-views special">
+                            <span class="me-1"> <i class="fa-regular fa-calendar"></i> May 15, 2020
+                            </span>
+                            <span> <i class="fa-solid fa-eye"></i> 397 Views</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ms_card-3">
+                    <div class="card-1-img mb-3">
+                        <img src="../../assets/img/artist-blog-01-480x356.jpg" alt="">
+                    </div>
+                    <div class="card-3-text">
+                        <div class="section-6-roll mb-1">
+                            ARTIST
+                        </div>
+                        <div class="title-6 mb-1">
+                            Pocket-Sized Notebooks Hold Miniature Paintings
+                        </div>
+                        <div class="date-views">
+                            <span class="me-1"> <i class="fa-regular fa-calendar"></i> May 15, 2020
+                            </span>
+                            <span> <i class="fa-solid fa-eye"></i> 603 Views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="call-to-action-6 text-center pb-4">
+                <span class="cta-1">Get into details now? </span>
+                <span class="cta-2">View all posts <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
 
         </div>
     </section>
@@ -166,6 +234,176 @@ h2 {
 
 // SECTION 6-------------------
 .section-6 {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-1 {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 0;
+}
+
+.bg-2 {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-size: 5rem;
+    color: #ecc5ab;
+}
+
+.bg-3 {
+    position: absolute;
+    top: 17%;
+    left: 32%;
+
+    width: 10%;
+}
+
+.section-6 {
     background-color: #f5f7fa;
+
+    .cards-6 {
+
+        .ms_card-1,
+        .ms_card-3 {
+            width: 20%;
+            background-color: white;
+            position: relative;
+            z-index: 999;
+
+            img {
+                width: 100%;
+                height: 10rem;
+                object-fit: cover;
+            }
+        }
+
+        .ms_card-3 {
+            position: relative;
+            bottom: 5rem;
+        }
+
+        .card-1-text,
+        .card-3-text {
+            padding: 0 .5rem 1.2rem .5rem;
+        }
+
+        .special {
+            color: white;
+        }
+
+        .ms_card-2 {
+            width: 35%;
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            .black {
+                background-color: rgba(0, 0, 0, .2);
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+            }
+        }
+
+        .card-2-text {
+            position: absolute;
+            bottom: 0;
+            z-index: 999;
+            padding: 0 1rem 1.5rem 1rem;
+
+            .title-6 {
+                font-size: 1.4rem;
+            }
+        }
+
+    }
+
+    .cta-1 {
+        color: gray;
+        font-size: .8rem;
+    }
+
+    .cta-2 {
+        color: #ef6f31;
+        font-weight: 600;
+        font-size: .8rem;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    @media screen and (min-width: 1200px) {
+        .cards-6 {
+
+            .ms_card-1,
+            .ms_card-3 {
+                width: 15%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+
+        .cards-6 {
+            .ms_card-3 {
+                position: relative;
+                bottom: 0;
+
+                img {
+                    object-position: top;
+                }
+            }
+
+            .ms_card-1,
+            .ms_card-3 {
+                width: 30%;
+            }
+        }
+
+    }
+
+    .section-6-roll {
+        color: gray;
+        font-size: .8rem;
+    }
+
+    .title-6 {
+        font-size: .9rem;
+        font-weight: 600;
+    }
+
+    .date-views {
+        font-size: .7rem;
+        color: gray;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .section-6 {
+        .cards-6 {
+            flex-wrap: wrap;
+
+            .ms_card-1,
+            .ms_card-3,
+            .ms_card-2 {
+                width: 100%;
+                margin-bottom: 3rem;
+            }
+
+            .ms_card-2 {
+                img {
+
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
 }
 </style>
