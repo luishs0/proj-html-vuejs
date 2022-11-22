@@ -13,6 +13,11 @@ export default {
         explore: Array,
         information: Array,
         fotoList: Array,
+    },
+    methods: {
+        getImagePath: function (imgPath) {
+            return new URL(imgPath, import.meta.url).href;
+        }
     }
 }
 </script>
@@ -41,39 +46,54 @@ export default {
 
     <!-- FOOTER BOTTOM -->
     <section class="footer-bottom">
-        <div class="container">
+        <div class="container d-flex flex-wrap justify-content-around">
             <!-- Adress -->
-            <div class="adress-column">
-                <h4> Adress </h4>
-                <ul>
-                    <li v-for="(adressInfo, index) in adress" :key="index"> {{ adressInfo }} </li>
+            <div class="adress-column pe-4">
+                <h4 class="mb-2"> Adress </h4>
+                <ul class="d-flex flex-wrap justify-content-around">
+                    <li v-for="(adressInfo, index) in adress" :key="index"> <a href="">{{ adressInfo }}</a> </li>
+                    <li class="icons-footer">
+                        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
                 </ul>
+
             </div>
 
             <!-- Explore -->
-            <div class="explore-column">
+            <div class="explore-column d-flex flex-wrap justify-content-around">
                 <h4>Explore</h4>
-                <ul>
-                    <li v-for="(exploreLink, index) in explore"> {{ exploreLink }}</li>
+                <ul class="d-flex flex-wrap justify-content-around">
+                    <li v-for="(exploreLink, index) in explore"> <a href="">{{ exploreLink }}</a> </li>
                 </ul>
             </div>
 
             <!-- Information -->
-            <div class="info-column">
+            <div class="info-column d-flex flex-wrap justify-content-around">
                 <h4>Information</h4>
-                <ul>
-                    <li v-for="(infoLink, index) in information"> {{ infoLink }} </li>
+                <ul class=" d-flex flex-wrap justify-content-around">
+                    <li v-for="(infoLink, index) in information"> <a href="">{{ infoLink }}</a> </li>
                 </ul>
             </div>
 
             <!-- Instagram -->
             <div class="instagram-column">
-                <h4>Instagram <span>@maxcoach</span></h4>
-                <ul>
+                <h4>Instagram <span class="orange">@maxcoach</span></h4>
+                <div class="insta-imgs d-flex flex-wrap justify-content-between">
+                    <div class="insta-img" v-for="(foto, index) in fotoList">
+                        <img :src="getImagePath(`../assets/img${foto}`)" alt="">
+                    </div>
+                </div>
 
-                </ul>
             </div>
 
+        </div>
+
+        <div class="last text-center mt-5">
+            <i class="fa-regular fa-copyright"></i>
+            2020 Maxcoach. All Rights Reserved
         </div>
     </section>
     <!-- /FOOTER BOTTOM -->
@@ -83,6 +103,10 @@ export default {
 
 <style lang="scss" scoped>
 // FOOTER TOP-------------------------
+ul {
+    margin-bottom: 0;
+}
+
 .footer-top {
     background-color: #244186;
     color: white;
@@ -158,4 +182,112 @@ export default {
 }
 
 // FOOTER BOTTOM-----------------------------------
+.footer-bottom {
+
+    padding: 5rem 0 2rem 0;
+
+    li {
+        color: gray;
+        margin-bottom: .2rem;
+
+        a {
+            text-decoration: none;
+            color: gray;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            i {
+                font-size: 1rem;
+                padding-right: 1rem;
+                padding-top: .8rem;
+            }
+        }
+    }
+
+    .adress-column {
+        width: 35%;
+
+        h4 {
+            font-size: .9rem;
+            width: 100%;
+        }
+
+        li {
+            font-size: .7rem;
+            width: 100%;
+        }
+    }
+
+    .info-column,
+    .explore-column {
+        width: 10%;
+
+        h4 {
+            font-size: .9rem;
+            width: 100%;
+        }
+
+        li {
+            font-size: .7rem;
+            width: 100%;
+        }
+    }
+
+    .instagram-column {
+        width: 30%;
+
+        h4 {
+            font-size: .9rem;
+        }
+
+        .orange {
+            color: #ef6f31;
+            font-weight: 300;
+        }
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .insta-img {
+        width: calc(100% / 3 - .2rem);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .last {
+        color: rgba(155, 155, 155, .8);
+        font-size: .6rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .adress-column {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-column,
+        .explore-column {
+            width: 50%;
+            margin-bottom: 1.5rem;
+        }
+
+        .instagram-column {
+            width: 100%;
+            margin-bottom: 1.5rem;
+
+        }
+    }
+}
 </style>
