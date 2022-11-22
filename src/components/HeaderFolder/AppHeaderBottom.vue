@@ -77,6 +77,8 @@ export default {
     }
 }
 
+// IMGS-----------------------------------------
+
 .artist-shape-1 {
     width: 45%;
 

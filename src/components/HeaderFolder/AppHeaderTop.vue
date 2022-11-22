@@ -30,9 +30,11 @@ export default {
             </div>
 
             <div class="links">
-                <a v-for="(link, index) in this.store.headerLinks" :key="index" href=""> {{ link }} <i
-                        class="fa-solid fa-chevron-down"></i>
-                </a>
+                <ul class="d-flex align-items-center justify-content-center">
+                    <li v-for="(link, index) in this.store.headerLinks" :key="index">
+                        <a href=""> {{ link }} <i class="fa-solid fa-chevron-down"></i> </a>
+                    </li>
+                </ul>
             </div>
 
             <div class="social">
@@ -93,22 +95,36 @@ export default {
     }
 
     .links {
+        display: flex;
+        align-items: center;
 
+        vertical-align: middle;
 
-        a {
-            text-decoration: none;
-            color: $primary-gray;
-            font-size: .8rem;
+        ul {
+            list-style-type: none;
+            vertical-align: middle;
+            margin: .3rem;
 
-            i {
-                font-size: .5rem;
-                vertical-align: middle;
+            li {
+                a {
+                    text-decoration: none;
+                    color: $primary-gray;
+                    font-size: .8rem;
+
+                    i {
+                        font-size: .5rem;
+                        vertical-align: middle;
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-right: 1.5rem;
+                }
             }
+
+
         }
 
-        & a:not(:last-child) {
-            margin-right: 1.8rem;
-        }
     }
 
     .social {
@@ -124,13 +140,17 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
-    .links {
-        display: none;
+
+    .ms_navbar {
+        .links {
+            display: none;
+        }
+
+        .social {
+            display: none;
+        }
     }
 
-    .social {
-        display: none;
-    }
 
     .menu-hamburguer {
         display: block;
