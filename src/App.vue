@@ -31,12 +31,6 @@ export default {
     AppMain,
     AppFooter
   },
-  created() {
-    // Funzioni inmediate
-  },
-  methods: {
-    // Metods
-  }
 }
 
 </script>
