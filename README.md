@@ -1,7 +1,3 @@
-# Vue 3 + Vite
+<h1> Proyecto Front-End </h1>
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+<p> Este proyecto se trata de una página web artística realizada con Vue y Vite, en la que he aprendido a gestionar de una manera óptima los componentes, además de haber utilizado algunos datos dinámicos con JavaScript, utilizando props y también el archivo store.js </p>
